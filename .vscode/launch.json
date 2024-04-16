@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run risk-management-NaN",
+      "request": "launch",
+      "type": "node",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "cds",
+      "args": [
+        "serve",
+        "--in-memory?",
+        "--port",
+        "4003"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "envFile": "${workspaceFolder}/.envNaN",
+      "env": {
+        "NODE_ENV": "development",
+        "run.config": "{\"handlerId\":\"cap_run_config_handler_id\",\"runnableId\":\"{\\\"projectPath\\\":\\\"/home/user/projects/risk-management\\\",\\\"profileName\\\":\\\"development\\\"}\"}"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "launch",
+      "cwd": "${workspaceFolder}/srv",
+      "program": "${workspaceFolder}/srv/risk-service.js"
+    }
+  ]
+}
